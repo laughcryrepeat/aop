@@ -1,17 +1,21 @@
-package hello.proxy.app.v3;
+package hello.aop.order;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
-public class OrderServiceV3 {
+public class OrderService {
 
-    private final OrderRepositoryV3 orderRepository;
+    private final OrderRepository orderRepository;
 
-    public OrderServiceV3(OrderRepositoryV3 orderRepository) {
+    public OrderService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
 
     public void orderItem(String itemId) {
+        log.info("[OrderService] 실행");
+
         orderRepository.save(itemId);
     }
 }
