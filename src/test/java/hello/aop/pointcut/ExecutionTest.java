@@ -23,7 +23,7 @@ public class ExecutionTest {
 
     @Test
     void printMethod() {
-        //public java.lang.String hello.aop.order.aop.member.MemberServiceImpl.hello(java.lang.String)
+        //public java.lang.String hello.aop.member.MemberServiceImpl.hello(java.lang.String)
         log.info("helloMethod={}", helloMethod);
     }
 
